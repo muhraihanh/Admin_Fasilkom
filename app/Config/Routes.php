@@ -39,25 +39,21 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 
-
-$routes->get('/komik/login', 'Komik::login');
-$routes->get('/komik/registrasi', 'Komik::registrasi');
-$routes->get('/komik', 'Komik::index');
-$routes->get('/', 'Komik::login');
-$routes->get('/komik/create', 'Komik::create');
-$routes->delete('/komik/(:num)', 'Komik::delete/$1');
-$routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
-$routes->get('/komik/(:any)', 'Komik::detail/$1');
+$routes->get('/', 'Visitor::index');
+// $routes->get('/komik/login', 'Komik::login');
+// $routes->get('/komik/registrasi', 'Komik::registrasi');
+// $routes->get('/komik', 'Komik::index');
+// $routes->get('/', 'Komik::login');
+// $routes->get('/komik/create', 'Komik::create');
+// $routes->delete('/komik/(:num)', 'Komik::delete/$1');
+// $routes->get('/komik/edit/(:segment)', 'Komik::edit/$1');
+// $routes->get('/komik/(:any)', 'Komik::detail/$1');
 
 // routes untuk mengakses Controller Users method index
 $routes->get('/users', 'admin\Users::index');
 
 
 
-$routes->get('coba/index', 'coba::index');
-$routes->get('coba/about', 'coba::about');
-$routes->get('coba/nyaroke', 'coba::nyaroke');
-$routes->get('/coba/(:any)', 'coba::index/$1');
 
 
 
